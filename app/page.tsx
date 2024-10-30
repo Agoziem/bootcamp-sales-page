@@ -1,4 +1,6 @@
+import BackToTop from "@/components/BackToTop";
 import About from "@/sections/about";
+import Certificate from "@/sections/certificate";
 import Content from "@/sections/content";
 import Details from "@/sections/details";
 import Faq from "@/sections/faq";
@@ -23,9 +25,11 @@ export default function Home() {
       <Schedule />
       <Requirements />
       <Details />
+      <Certificate />
       <Faq />
       <Reviews />
       <Footer />
+      <BackToTop />
     </>
   );
 }
