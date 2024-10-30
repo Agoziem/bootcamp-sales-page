@@ -71,7 +71,7 @@ const Hosts = () => {
                 quam pulvinar interdum porttitor elit quis elementum duis
                 curabitur.{" "}
               </p>
-              <div className="mt-3 flex flex-row flex-wrap gap-11">
+              <div className="mt-3 flex flex-row flex-wrap gap-7 md:gap-11">
                 <div className="flex flex-col">
                   <div className="flex items-center gap-2">
                     <h6 className="text-[20px] font-bold">4.6</h6>
@@ -117,7 +117,7 @@ const Hosts = () => {
                   Semper quam pulvinar interdum porttitor elit quis elementum
                   duis curabitur.{" "}
                 </p>
-                <div className="mt-3 flex flex-row flex-wrap gap-11">
+                <div className="mt-3 flex flex-row flex-wrap gap-7 md:gap-11">
                   <div className="flex flex-col">
                     <div className="flex items-center gap-2">
                       <h6 className="text-[20px] font-bold">4.6</h6>

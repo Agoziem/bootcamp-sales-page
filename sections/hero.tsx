@@ -22,16 +22,16 @@ const Hero = () => {
               quam pulvinar interdum porttitor elit quis elementum duis
               curabitur.
             </p>
-            <div className="mt-8 flex items-center  flex-wrap sm:gap-6 md:gap-11">
-              <div className="flex items-center gap-3">
+            <div className="mt-8 flex items-center flex-wrap gap-6 md:gap-11">
+              <div className="flex items-center gap-2">
                 <RiShapesLine />
                 <p>Bootcamp</p>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
                 <FaRegClock />
                 <p>4 Weeks</p>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
                 <LuCalendarDays />
                 <p>3rd December</p>
               </div>

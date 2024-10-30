@@ -13,7 +13,7 @@ const About = () => {
   return (
     <section className="mt-8 mb-5 py-8">
       <div className="container flex flex-col items-center">
-        <h2 className="text-3xl font-bold mb-10">About this Bootcamp</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center">About this Bootcamp</h2>
         {/* React Player only renders on the client */}
         <div className="w-[80vw] h-[60vw] max-w-[750px] max-h-[450px]">
           {isClient && (

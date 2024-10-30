@@ -127,7 +127,8 @@ const Reviews = () => {
                     <div>{review.category}</div>
                     <div className="w-full h-[10px] relative bg-grey rounded-lg ">
                       <div
-                        className={`absolute top-0 left-0 h-full w-[${review.rating}%] bg-gold rounded-lg`}
+                        className="absolute top-0 left-0 h-full bg-gold rounded-lg"
+                        style={{ width: `${review.rating}%` }}
                       ></div>
                     </div>
                     <div>{review.rating}</div>
