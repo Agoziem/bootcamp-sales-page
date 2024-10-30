@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import React from "react";
 import HostImage from "@/assets/host_image1.png";
@@ -8,8 +7,6 @@ import Instructor1 from "@/assets/guest_instructor1.png";
 import Instructor2 from "@/assets/guest_instructor2.png";
 import Instructor3 from "@/assets/guest_instructor3.png";
 import { FaStar } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { fadeIn } from "@/components/variants/variant";
 
 const Staff = {
   host: {
@@ -59,21 +56,14 @@ const Hosts = () => {
           <div className="flex flex-col md:flex-row items-center gap-9 md:px-8">
             {/* The Image */}
             <div>
-              <motion.img
-                src={Staff.host.img.src}
+              <Image
+                src={Staff.host.img}
                 alt="Staff Image"
                 className="rounded-[36px]"
-                variants={fadeIn("up", 0.2)}
-                initial="hidden"
-                whileInView={"show"}
               />
             </div>
             {/* The details */}
-            <motion.div
-              variants={fadeIn("up", 0.4)}
-              initial="hidden"
-              whileInView={"show"}
-            >
+            <div>
               <p className="text-[#474747] text-lg">{Staff.host.username}</p>
               <h4 className="mt-1 font-bold text-[32px]">{Staff.host.name}</h4>
               <p className="mt-3 text-lg leading-[32px]">
@@ -98,7 +88,7 @@ const Hosts = () => {
                   <p className="text-sm">Customers</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         )}
 
@@ -112,21 +102,14 @@ const Hosts = () => {
             >
               {/* The Image */}
               <div>
-                <motion.img
-                  src={co_host.img.src}
+                <Image
+                  src={co_host.img}
                   alt="Staff Image"
                   className="rounded-[36px]"
-                  variants={fadeIn("up", 0.2)}
-                  initial="hidden"
-                  whileInView={"show"}
                 />
               </div>
               {/* The details */}
-              <motion.div
-                variants={fadeIn("up", 0.4)}
-                initial="hidden"
-                whileInView={"show"}
-              >
+              <div>
                 <p className="text-[#474747] text-lg">{co_host.username}</p>
                 <h4 className="mt-1 font-bold text-[32px]">{co_host.name}</h4>
                 <p className="mt-3 text-lg leading-[32px]">
@@ -151,7 +134,7 @@ const Hosts = () => {
                     <p className="text-sm">Customers</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           ))}
 
@@ -166,19 +149,12 @@ const Hosts = () => {
                 className="flex flex-col gap-3"
                 key={`${index}_${instructor.name}`}
               >
-                <motion.img
-                  src={instructor.img.src}
+                <Image
+                  src={instructor.img}
                   alt={instructor.name}
                   className="rounded-[24px] w-[310px]"
-                  variants={fadeIn("up", 0.2)}
-                  initial="hidden"
-                  whileInView={"show"}
                 />
-                <motion.div
-                  variants={fadeIn("up", 0.4)}
-                  initial="hidden"
-                  whileInView={"show"}
-                >
+                <div>
                   <p className="text-[#474747] text-lg">
                     {instructor.username}
                   </p>
@@ -190,7 +166,7 @@ const Hosts = () => {
                     Semper quam pulvinar interdum porttitor elit quis elementum
                     duis curabitur.{" "}
                   </p>
-                </motion.div>
+                </div>
               </div>
             ))}
         </div>
