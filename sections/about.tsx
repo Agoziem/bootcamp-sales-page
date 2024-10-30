@@ -2,6 +2,8 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/components/variants/variant";
 
 const About = () => {
   const [isClient, setIsClient] = useState(false);
@@ -13,7 +15,9 @@ const About = () => {
   return (
     <section className="mt-8 mb-5 py-8">
       <div className="container flex flex-col items-center">
-        <h2 className="text-3xl font-bold mb-10 text-center">About this Bootcamp</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center">
+          About this Bootcamp
+        </h2>
         {/* React Player only renders on the client */}
         <div className="w-[80vw] h-[60vw] max-w-[750px] max-h-[450px]">
           {isClient && (
@@ -28,7 +32,12 @@ const About = () => {
 
         {/* Write-up section */}
         <div className="mt-10 mb-8 max-w-[1000px]">
-          <p className="text-center leading-[40px] text-lg ">
+          <motion.p
+            className="text-center leading-[40px] text-lg "
+            variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView={"show"}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper quam
             pulvinar interdum porttitor elit quis elementum duis curabitur.
             Adipiscing ac ut eros, sed aenean justo lacinia ornare consectetur.
@@ -36,7 +45,7 @@ const About = () => {
             quam. Vitae ullamcorper dignissim auctor quis volutpat morbi arcu
             blandit massa. Adipiscing ac ut eros, sed aenean justo lacinia
             ornare consectetur.
-          </p>
+          </motion.p>
         </div>
 
         <div className="hover:bg-gray-100 px-5 py-3 rounded-lg transition ease-in-out">

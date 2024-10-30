@@ -122,8 +122,8 @@ const Reviews = () => {
 
             <div className="flex flex-col gap-3 w-full min-w-72">
               {reviewData &&
-                reviewData.map((review) => (
-                  <div className="flex gap-2 items-center">
+                reviewData.map((review,index) => (
+                  <div className="flex gap-2 items-center" key={`${index}_${review.category}`}>
                     <div>{review.category}</div>
                     <div className="w-full h-[10px] relative bg-grey rounded-lg ">
                       <div
